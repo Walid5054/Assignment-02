@@ -26,6 +26,7 @@ header .head-icon,
   font-size: 1.25rem;
   font-weight: 700;
 }
+
 .head-list ul li {
   list-style-type: none;
 }
@@ -312,6 +313,95 @@ hr {
   justify-content: center;
   align-items: center;
 }
+.extra-card {
+  display: none;
+}
+footer {
+  background-color: rgb(1, 172, 253);
+  width: 100%;
+  margin: 0px auto;
+  padding: 50px 0px;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+  margin: 50px auto;
+  gap: 50px;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+}
+.footer-left img {
+  height: 150px;
+  width: 150px;
+  color: white;
+}
+.footer-left div {
+  display: flex;
+  gap: 10px;
+}
+.footer-left-description {
+  width: 70%;
+  color: rgb(255, 255, 255);
+  font-family: Quicksand;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.footer-left-title {
+  color: rgb(255, 255, 255);
+  font-family: Quicksand;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 39.51px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.about-school {
+  color: rgb(255, 255, 255);
+  font-family: Quicksand;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.footer-middle ul li a {
+  color: rgb(255, 255, 255);
+  font-family: Quicksand;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-decoration: none;
+}
+.footer-middle ul li {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.keep-in-touch {
+  color: rgb(255, 255, 255);
+  font-family: Quicksand;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.footer-right div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 /* responsive starts from here  */
 @media screen and (max-width: 576px) {
   .head-list ul,
@@ -319,6 +409,7 @@ hr {
   .head-icon h3 {
     display: none;
   }
+
   .burger-icon {
     visibility: visible;
   }
@@ -348,28 +439,56 @@ hr {
   .cards {
     flex-direction: column;
   }
-  .section-cards {
-    grid-template-areas:
-      "sideArea sideArea"
-      "sideArea1 sideArea2"
-      "sideArea3 sideArea4";
-    padding: 0px;
-    margin: 0px;
-    width: 80%;
+
+  /* .card2 {
+    grid-area: sideArea;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
-  .card-1 {
-    visibility: hidden;
+  .card3 {
+    grid-area: sideArea2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .card4 {
+    grid-area: sideArea3;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .card5 {
+    grid-area: sideArea4;
+    width: 100%;
+  } */
+  .extra-card {
+    display: inline-block;
+  }
+
+  .section-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0px;
   }
   .our-stories {
+    height: 1500px;
     width: 100%;
-    margin: 100px auto;
-    background: url(assets/bg.png),
-      linear-gradient(
-        0deg,
-        rgba(254, 163, 1, 0.3),
-        rgba(255, 255, 255, 0.3) 100%
-      );
-    height: 500px;
+    margin: 20px 0px;
+  }
+  .view-all {
+    margin: 20px auto;
+  }
+
+  .card1 {
+    display: none;
+  }
+  .foot {
+    flex-direction: column;
+  }
+  .footer-right div {
+    width: 70%;
   }
 }
 
@@ -404,5 +523,11 @@ hr {
   .cards {
     flex-direction: column;
     width: 100%;
+  }
+  .foot {
+    flex-direction: column;
+  }
+  .footer-right div {
+    width: 70%;
   }
 }
